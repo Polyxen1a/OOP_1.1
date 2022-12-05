@@ -1,7 +1,7 @@
 public class Human {
-    public int age;
+    private int age;
     public String name;
-    public String city;
+    private String city;
 
     public String post;
 
@@ -27,4 +27,29 @@ public class Human {
             this.post = post;
         }
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age<0) {
+            this.age = 0;
+        } else {
+            this.age = age;
+        }
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        if (city == null) {
+            this.city = "Информаация не указана";
+        } else {
+            this.city = city;
+        }
+    }
+
 }
